@@ -1,499 +1,123 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+:root{
+  --rojo: #E50914;
+  --fondo:#141414;
 }
 
-:root {
-  --main-color: #f3f3f3;
-  --secondary-color: #161516;
-  --third-color: #850f0f;
-  --third-color-t: #840404bc;
-  --font-weight-bold: 700;
-}
-
-body {
-  background-color: var(--secondary-color);
-  color: var(--main-color);
-}
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgb(23, 23, 23);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #9f3647;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #9f3647;
-}
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h1,
-h2 {
-  font-weight: var(--font-weight-bold);
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
-header,
-footer {
-  background-color: var(--third-color);
-  color: var(--main-color);
-  padding: 20px;
-}
-
-.header {
-  height: 15vh;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.header nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header nav a {
-  text-decoration: none;
-  color: var(--main-color);
-  font-size: 1.6rem;
-}
-.header nav ul {
-  list-style: none;
-  display: flex;
-  column-gap: 20px;
-}
-.header nav ul a {
-  font-size: 1.4rem;
-}
-
-@media screen and (max-width: 800px) {
-  .header {
-    height: initial;
-  }
-  .header nav {
-    flex-direction: column;
-    row-gap: 20px;
-  }
-  .header nav ul {
-    flex-direction: column;
-    row-gap: 10px;
-  }
-}
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
 }
 
-.loading-screen{
-  width: 100%;
-  height: 100vh;
-  background-color: #2e2e2e;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+body{
+  background: var(--fondo);
+  font-family: 'Open Sans', sans-serif;
 }
 
-.loading{
-  width: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  animation: rotate 3s linear infinite;
+.contenedor{
+  width: 90%;
+  margin: auto;
+
 }
 
-@keyframes rotate{
-  to{
-    transform: rotate(360deg);
-  }
+header {
+  padding: 30px 0;
 }
 
-.loading span{
-  width: 32px;
-  height: 32px;
-  background-color: red;
-  margin: 3px;
-  animation: scale 1.5s linear infinite;
-}
-
-@keyframes scale{
-  50%{
-    transform: scale(1.2);
-  }
-}
-
-.loading span:nth-child(1){
-  border-radius: 50% 50% 0 50%;
-  background-color: #ffbe0b;
-  transform-origin: bottom right;
-}
-
-.loading span:nth-child(2){
-  border-radius: 50% 50% 50% 0;
-  background-color: #ff006e;
-  transform-origin: bottom left;
-  animation-delay: .5s;
-}
-
-.loading span:nth-child(3){
-  border-radius: 50% 0 50% 50%;
-  background-color: #fb5607;
-  transform-origin: top right;
-  animation-delay: 1.5s;
-}
-
-.loading span:nth-child(4){
-  border-radius: 0 50% 50% 50%;
-  background-color: #8338ec;
-  transform-origin: top left;
-  animation-delay: 1s;
-}
-
-.sectionTitles {
-  height: 85vh;
-  background: linear-gradient(to bottom, #000000a3, #000000a3),
-    url("../assets/img/banner-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sectionTitles .titlesContainer {
-  text-align: center;
-  backdrop-filter: blur(8px);
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-.sectionTitles .titlesContainer a {
-  margin-top: 20px;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--main-color);
-  font-size: 2rem;
-  border: 2px solid var(--main-color);
-  border-radius: 5px;
-}
-
-@media screen and (max-width: 800px) {
-  .sectionTitles {
-    height: 75vh;
-    background: linear-gradient(to bottom, #000000a3, #000000a3),
-      url("../assets/img/bg_mobile.jpg");
-  }
-  .sectionTitles .titlesContainer {
-    width: 90%;
-    backdrop-filter: initial;
-  }
-  .sectionTitles .titlesContainer a {
-    font-size: 1.5rem;
-  }
-}
-
-.trendingMovies {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-.trendingMovies h2 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-.trendingMovies .galleryTrends {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.trendingMovies .galleryTrends div {
-  width: 250px;
-  height: 350px;
-  box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.42);
-  border-radius: 5px;
-}
-.trendingMovies .galleryTrends div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.acclaimedMovies {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.acclaimedMovies h2 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-.acclaimedMovies .galleryAcclaimed {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  column-gap: 30px;
-}
-.acclaimedMovies .galleryAcclaimed div {
-  width: 220px;
-  height: 350px;
-  flex-shrink: 0;
-  box-shadow: 10px 10px 47px -45px rgba(255, 255, 255, 0.29);
-}
-.acclaimedMovies .galleryAcclaimed div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.navigation {
+header .contenedor{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40px;
-  margin-right: 40px;
-  padding: 1.5rem 0;
 }
 
-.navList {
-  list-style: none;
-  display: flex;
-  align-items: center;
+header .logotipo {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: var(--rojo);
+  font-size: 40px;
 }
-.itemList {
+
+header nav a{
+  color: #aaa;
+  text-decoration: none;
   margin-right: 20px;
 }
 
-.navLink {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  /* Agregar efecto de botón presionado */
-  transition: transform 0.3s, box-shadow 0.3s;
-  &:hover {
-    transform: scale(0.95);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-  }
+header nav a:hover,
+header nav a.activo{
+  color:#FFF;
+
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.searchBar {
-  background-color: #181419;
-  color: rgb(255, 255, 255);
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.sectionTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.movieSearch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-}
-.inputSearch {
-  border: 2px solid white;
-  border-radius: 25px;
-  color: #000000;
-  font-size: 1.2rem;
-  height: 50px;
-  margin: 20px 0px;
-  outline: none;
-  padding: 0px 20px;
-  width: 500px;
-}
-.searchButton {
-  background-color: #9f3647;
-  display: inline-block;
-  color: #ffffff;
-  height: 50px;
-  margin: 20px 10px;
-  padding: 0 20px;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border: 2px solid white;
-  text-align: center;
-  /* Agregar efecto de botón presionado */
-  transition: transform 0.3s, box-shadow 0.3s;
-  &:hover {
-    background-color: #9f3647;
-    transform: scale(0.95);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-}
-
-.btn {
-  border: 1px solid white;
-  box-sizing: content-box;
-  margin-top: 50px;
-  margin-left: 20px;
-  background-color: #9f3647;
-  color: #ffffff;
-  padding: 1rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  margin-bottom: 60px;
-  /* Agregar efecto de botón presionado */
-  transition: transform 0.3s, box-shadow 0.3s;
-  &:hover {
-    background-color: #9f3647;
-    transform: scale(0.95);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-}
-
-.signUpBody {
-  height: 100vh;
-  background: linear-gradient(to right top, #24242473, #24242473),
-    url("../assets/img/bg-register.jpg");
+.Pelicula-Principal{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background:linear-gradient(rgba(0, 0, 0, .50)0%,rgba(0,0,0,.40) 100%), url(../assets/img/inter.jpg);
+  background-position: center center;
   background-size: cover;
-  background-position: center;
-
-  /*seccion de registrarse.html*/
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
 }
-.signUpHeader {
-  color: #ffffff;
-  height: 8vh;
-  padding: 30px;
-  background-color: transparent;
-}
-.logoAnchor {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.2rem;
-  /*animacion hover*/
-  &:hover {
-    animation: tilt-n-move-shaking 0.25s infinite;
-  }
-}
-
-.sectionRegister {
-  background-color: rgb(42, 42, 42);
-  width: 30%;
+.Pelicula-Principal .contenedor {
   margin: 0 auto;
-  border-radius: 5px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  font-size: 1.2rem;
-
-  /*seleccionar todos los input menos el checkbox*/
+  margin-bottom: 6.25em;
 }
 
-select {
-  width: 100%;
-  margin-bottom: 10px;
-  height: 40px;
-  padding: 0px 20px;
-  font-size: 1.2rem;
-  border-radius: 20px;
-  border: 2px solid #9f3647;
-  background-color: #333333;
-  outline: none;
-  color: rgb(255, 255, 255);
+.Pelicula-Principal .titulo{
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
 }
 
-.signUpTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+.Pelicula-Principal .descripcion{
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
 }
 
-.error-text {
-  color: #ff0000;
-  font-size: 0.8rem;
-  margin-top: 0px;
-  margin-bottom: 10px;
+.Pelicula-Principal .boton {
+  background: rgba(0, 0, 0, 0.5);
+  border:none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor:pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
 }
-.terms {
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  .textoCheck {
-    margin-left: 10px;
+
+.Pelicula-Principal .boton:hover{
+  background: #fff;
+  color:#000;
+}
+
+.Pelicula-Principal .boton i{
+  margin-right: 1.25em;
+}
+
+/* -------- media Queries------------*/
+@media screen and (max-width:800px){
+  header .logotipo{
+    margin-bottom: 10px;
   }
-}
 
-.help {
-  margin-top: 40px;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #787878;
-  font-weight: 400;
-}
+  header .contenedor{
+    flex-direction: column;
+    text-align: center;
+  }
 
-.button {
-  width: 87%;
-  box-sizing: content-box;
-  background-color: #9f3647;
-  border: 2px solid #9f3647;
-  color: #ffffff;
-  padding: 1rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 500;
-}
+  .Pelicula-Principal {
+    font-size: 14px;
+  }
 
-.formSignUp {
-  width: 100%;
-  padding: 40px;
-  input:not(.check, .button),
-  .error input:not(.check, .boton),
-  .error select {
-    border: 1px solid #ff0000;
+  .Pelicula-Principal .descripcion{
+    max-width: 100%;
   }
 }

@@ -1,246 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CAC-MOVIES</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <title>Pelis24HD</title>
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <h2 class="logotipo">MySpace</h2>
+        <nav>
+          <a href="#" class="activo">Inicio</a>
+          <a href="./pages/login.html">iniciar sesion</a>
+          <a href="#">Mi lista</a>
+          <a href="#">Usuario</a>
+        </nav>
+    </div>
+    
+  </header>
 
-    <link rel="stylesheet" href="./css/estilos.css" />
-    <script
-      src="https://kit.fontawesome.com/f7fb471b65.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header class="header">
-      <nav>
-        <a href="#">
-          <i class="fas fa-film" aria-hidden="true"></i>
-          <span>CAC-Movies</span>
-        </a>
-        <ul>
-          <li><a href="#tendencias">Tendencias</a></li>
-          <li><a href="./pages/signup.html">Registrarse</a></li>
-          <li><a href="./pages/login.html">Iniciar Sesión</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="sectionTitles">
-        <div class="titlesContainer">
-          <h1>
-            Películas y series ilimitadas <br />
-            en un solo lugar
-          </h1>
-          <h2>
-            Disfruta donde quieras. <br />
-            Cancela en cualquier momento.
-          </h2>
-          <a href="./pages/registrarse.html">Registrate</a>
-        </div>
-        <div class="loading-screen">
-          <div class="loading">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </section>
-      <section class="searchBar">
-        <h2 class="sectionTitle">¿Qué estas buscando para ver?</h2>
-        <form class="movieSearch">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            id="buscar"
-            name="buscar"
-            class="inputSearch"
-          />
-          <input class="searchButton" type="submit" value="Buscar" />
-        </form>
-      </section>
-      <hr />
-      <section id="tendencias" class="trendingMovies">
-        <h2>Las tendencias de hoy</h2>
-        <div class="galleryTrends">
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_1.jpg"
-                alt="The Beekeeper"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_2.jpg"
-                alt="Badland Hunters"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_3.jpg"
-                alt="The Marvels"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img src="./assets/img/peli_4.jpg" alt="Wonka" loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_5.jpg"
-                alt="Aquaman and the Lost Kingdom"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_6.jpg"
-                alt="Migration"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img
-                src="./assets/img/peli_7.jpg"
-                alt="Sixty Minutes"
-                loading="lazy"
-            /></a>
-          </div>
-          <div>
-            <a href="./pages/detalle.html"
-              ><img src="./assets/img/peli_8.jpg" alt="Wish" loading="lazy"
-            /></a>
-          </div>
-        </div>
-        <button class="btn">Anterior</button>
-        <button class="btn">Siguiente</button>
-      </section>
-      <hr />
-      <section class="acclaimedMovies">
-        <h2>Las más aclamadas</h2>
-        <div class="galleryAcclaimed">
-          <div>
-            <img
-              src="./assets/img/aclamada_1.jpg"
-              alt="aclamada_1"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_2.jpg"
-              alt="aclamada_2"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_3.jpg"
-              alt="aclamada_3"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_4.jpg"
-              alt="aclamada_4"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_5.jpg"
-              alt="aclamada_5"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_6.jpg"
-              alt="aclamada_6"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_7.jpg"
-              alt="aclamada_7"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_8.jpg"
-              alt="aclamada_8"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_9.jpg"
-              alt="aclamada_9"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_10.jpg"
-              alt="aclamada_10"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_11.jpg"
-              alt="aclamada_11"
-              loading="lazy"
-            />
-          </div>
-          <div>
-            <img
-              src="./assets/img/aclamada_12.jpg"
-              alt="aclamada_12"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <nav class="navigation">
-        <ul class="navList">
-          <li class="itemList">
-            <a class="navLink">Términos y condiciones</a>
-          </li>
-          <li class="itemList"><a class="navLink">Preguntas frecuentes</a></li>
-          <li class="itemList"><a class="navLink">Ayuda</a></li>
-          <li class="itemList">
-            <a class="navLink">Administrador Peliculas</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#main">
-        <img
-          src="./assets/img/flecha-hacia-arriba.png"
-          alt="ir arriba flecha"
-        />
-      </a>
-    </footer>
-  </body>
+  <main>
+    <div class="Pelicula-Principal">
+      <div class="contenedor">
+        <h3 class="titulo">Peliculas y Series Ilimitadas en un solo lugar</h3>
+        <p class="descripcion">
+          Encontra las mejores Peliculas en Full HD, en 4k, tus series Favoritas y los mejores series televisivas, volve a revivir tu infancia, y tus recuerdos a traves de nuestra plataforma.
+          Disfruta y comparte tus experiencias en la redes sociales.
+        </p>
+        <button role="button" class="boton" onclick="location.href='/pages/signup.html'"><i class="fa-solid fa-pen-to-square"></i>Registrarse</button>
+        <button role="button" class="boton" onclick="location.href='/pages/login.html'"><i class="fa-solid fa-user"></i>Iniciar Sesion</button>
+      </div>
+    </div>
+  </main>
+  <script src="https://kit.fontawesome.com/e93bf650e3.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
