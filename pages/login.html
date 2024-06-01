@@ -7,34 +7,50 @@
   <title>Inicio de Sesion</title>
   <link rel="stylesheet" href="/css/style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
-
-  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   
 </head>
+
+
 <body>
-  <div class="wrapper">
-    <form>
-      <h1 style="color:crimson;">MySpace</h1>
-      <h1>Inicio de Sesion</h1>
-      <div class="input-box">
-        <input type="text" placeholder="Username" required>
-        <i class='bx bxs-user'></i>
-      </div>
-      <div class="input-box">
-        <input type="password" placeholder="Password" required>
-        <i class='bx bxs-lock-alt' ></i>
-      </div>
+  <header>
+    <div class="contenedor">
+      <h2 class="logotipo">MySpace</h2>
+        <nav>
+          <a href="../index.html" class="activo">Inicio</a>
+          <a href="#">Mi lista</a>
+          <a href="#">Usuario</a>
+        </nav>
+    </div>
 
-      <div class="remember-forgot">
-        <label><input type="checkbox">Recuerdame</label>
-        <a href="#">Olvidaste la contraseña?</a>
-      </div>
+    <div class="wrapper">
+      <form id="loginform">
+        <h1 style="color:crimson;">MySpace</h1>
+        <h1>Inicio de Sesion</h1>
+        <div class="input-box">
+          <input type="email" placeholder="Email" id="email" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" id="password" required>
+          <i class='bx bxs-lock-alt' ></i>
+        </div>
+  
+        <div class="remember-forgot">
+          <label><input type="checkbox">Recuerdame</label>
+          <a href="#">Olvidaste la contraseña?</a>
+        </div>
+  
+        <button type="submit" class="btn">Ingresar</button>
+        <div class="register-link">
+          <p>No tienes cuenta?</p>
+          <a href="/pages/signup.html">Registrarse</a>
+        </div>
+      </form>
+    </div>
 
-      <button type="submit" class="btn">Inicio</button>
-      <div class="register-link">
-        <p>No recuerdas tu cuenta?</p>
-        <a href="#">Registrarse</a>
-      </div>
-    </form>
-  </div>
+  </header>
+
+  <script src="/js/login.js"></script>
 </body>
 </html>
